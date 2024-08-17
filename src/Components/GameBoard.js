@@ -25,7 +25,7 @@ const GameBoard = () => {
 
     // WebSocket connection setup for real-time leaderboard updates
     useEffect(() => {
-        const ws = new WebSocket('ws://localhost:8080/ws/leaderboard');
+        const ws = new WebSocket('ws://https://kitten-game-backend-zaia.onrender.com/ws/leaderboard');
 
         ws.onmessage = (event) => {
             const updatedLeaderboard = JSON.parse(event.data);

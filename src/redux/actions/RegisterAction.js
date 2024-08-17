@@ -1,11 +1,11 @@
-import axios from 'axios';
+
 
 export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
 export const REGISTER_FAIL = 'REGISTER_FAIL';
 
 export const registerUser = (username) => async dispatch => {
     try {
-      const response = await fetch('http://localhost:8080/api/register', {
+      const response = await fetch('https://kitten-game-backend-zaia.onrender.com/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

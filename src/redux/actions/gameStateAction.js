@@ -32,7 +32,7 @@ export const recordWin = (username, points) => {
       dispatch({ type: RECORD_WIN_REQUEST });
       try {
           console.log("Recording win with:", { username, points }); // Add this log
-          const response = await axios.post('http://localhost:8080/record-win', { username, points });
+          const response = await axios.post('https://kitten-game-backend-zaia.onrender.com/record-win', { username, points });
           dispatch({ type: RECORD_WIN_SUCCESS, payload: response.data });
           console.log('Win recorded successfully:', response.data);
       } catch (error) {
@@ -45,7 +45,7 @@ export const recordWin = (username, points) => {
 export const fetchLeaderboard = () => async (dispatch) => {
   dispatch(fetchLeaderboardRequest());
   try {
-    const response = await axios.get('http://localhost:8080/leaderboard');
+    const response = await axios.get('https://kitten-game-backend-zaia.onrender.com/leaderboard');
     
     dispatch(fetchLeaderboardSuccess(response.data));
   } catch (error) {
@@ -56,7 +56,7 @@ export const fetchLeaderboard = () => async (dispatch) => {
 export const saveGameState = (gameState) => async (dispatch) => {
   dispatch(saveGameStateRequest());
   try {
-    await axios.post('http://localhost:8080/api/save-game', gameState);
+    await axios.post('https://kitten-game-backend-zaia.onrender.com/api/save-game', gameState);
     dispatch(saveGameStateSuccess(gameState));
   } catch (error) {
     dispatch(saveGameStateFailure(error.message));
