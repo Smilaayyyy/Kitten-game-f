@@ -1,0 +1,44 @@
+
+/* Parent container to hold and center the card */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Adjust height to lift the cards up */
+  transform: translateY(-10%); /* Lift the cards up slightly */
+}
+
+/* Styling for the card */
+.card {
+  width: 150px; /* Increased width of the card */
+  height: 225px; /* Increased height of the card */
+  border: 2px solid #333; /* Border of the card */
+  border-radius: 10px; /* Rounded corners */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  position: relative; /* Position for placing symbols */
+  background-color: #fff; /* White background */
+  margin: 10px; /* Space around the card */
+  text-align: center; /* Center text */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a 3D effect */
+}
+
+/* Styling for the symbols inside the card */
+.card-symbol {
+  font-size: 2.5em; /* Increased font size of the symbol */
+  position: absolute; /* Absolute positioning for symbols */
+}
+
+.card-symbol.top {
+  top: 15px; /* Adjusted position at the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center by shifting half the width left */
+}
+
+.card-symbol.bottom {
+  bottom: 15px; /* Adjusted position at the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center by shifting half the width left */
+}

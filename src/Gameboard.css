@@ -1,0 +1,116 @@
+/* GameBoard.css */
+body {
+   
+    background-size: cover;
+    background-position: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* A playful font */
+    color: #333;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff6347; /* A bright color for the title */
+    text-shadow: 2px 2px #ffa07a; /* Subtle shadow for fun effect */
+}
+
+.game-container {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ffa07a;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border-radius: 12px;
+    border: none;
+    background-color: #ff6347;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffa07a;
+    transform: scale(1.1);
+}
+
+.leaderboard {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #c68dc2, #dc78a5); /* Soft pastel gradient background */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    backdrop-filter: blur(8px); /* Light blur for a glass effect */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.leaderboard:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 5px 5px 15px #c47cb933; /* Increased shadow on hover */
+}
+
+.leaderboard h2 {
+    font-size: 2.2em;
+    color: #00796b; /* Soft teal color for the title */
+    text-shadow: 2px 2px 5px rgba(0, 121, 107, 0.3); /* Subtle shadow for depth */
+}
+
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.2em; /* Slightly larger font size */
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid #00796b; /* Soft teal border */
+    color: #333; /* Darker color for contrast */
+}
+
+.leaderboard th {
+    background-color: #80deea; /* Soft pastel header background */
+    color: #004d40; /* Darker teal text for contrast */
+}
+
+.leaderboard td {
+    background-color: #e0f2f1; /* Very light teal background for table cells */
+    color: #004d40; /* Darker teal text for contrast */
+}
+
+.leaderboard td:first-child {
+    border-right: 2px solid #00796b; /* Border between username and wins */
+}
+/* Drawn Card Style */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .card {
+        font-size: 2.5em;
+    }
+}
